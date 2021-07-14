@@ -203,10 +203,15 @@ let loser = 'Glimmer'
 //CODE HERE
 
 function theEliminator(contestants, loser) {
-  for (let i = 0; i< theEliminator.length; i++);
-  if (loser )
+  for (let i = 0; i< theEliminator.length; i++);{
+  if (contestants[i] === loser) {
+    contestants.splice(1, 1)
+  } 
+} return contestants
+
 }
 
+let newContestants = theEliminator(contestants, loser)
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -225,6 +230,13 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+let exampleString = 'This is a sample string.'
+
+function makeUppercase (str) {
+  console.log(str.toUpperCase())
+}
+
+makeUppercase(exampleString)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -233,6 +245,17 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+function whatever2(gold) {
+  let newGold = gold
+  if (gold % 3 === 0) {
+    return gold / 3
+  } else if ((gold - 1) % 3 === 0) {
+    return (gold-1) / 3
+  }else {
+    return (gold -2) / 3
+  }
+  }
+}
 
 ////////////////// PROBLEM 14 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
@@ -242,6 +265,18 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 
+function arrayOfNumbers (arr) {
+  let checkingIfOrderAscending = arr[0]
+  for (let i = 1; i < arrayOfNumbers.length -1 ; i++) {
+    if (arr[i] <= checkingIfOrderAscending){
+      return false
+    } else {
+      checkingIfOrderAscending = arr[i]
+    }
+  }return true
+}
+
+let ascedingArray = checkingIfOrderAscending(sampleArray)
 
 ////////////////// PROBLEM 15 ////////////////////
 
@@ -265,13 +300,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck']
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['duck', 'rubberDuck', 'sailorDuck']
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['duck', 'sailorduck']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-// let pondScope = []
+// let pondScope = ['duck', 'realDuck]
